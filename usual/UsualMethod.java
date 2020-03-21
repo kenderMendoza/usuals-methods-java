@@ -1,11 +1,12 @@
 package usual;
+
 import java.util.concurrent.TimeUnit;
 
 // Usual Method
 public class UsualMethod {
 
-    public void menu(String options[]) {
-        int size = options.length,i;
+    public static void menu(String options[]) {
+        int size = options.length, i;
 
         for (i = 0; i < size; i++) {
             System.out.println(" " + (i + 1) + ". " + options[i] + ".");
@@ -14,7 +15,7 @@ public class UsualMethod {
     }
 
     // Una letra en mayuscula
-    public char letterUpperCase(int position) {
+    public static char letterUpperCase(int position) {
         if (position >= 0 && position <= 25) {
             char upperCase[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
                     'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
@@ -25,7 +26,7 @@ public class UsualMethod {
     }
 
     // Una letra en minuscula
-    public char letterLowerCase(int position) {
+    public static char letterLowerCase(int position) {
         if (position >= 0 && position <= 25) {
             char lowerCase[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
                     'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
@@ -36,7 +37,7 @@ public class UsualMethod {
     }
 
     // Crear un contorno para un titulo
-    public void title(String title, int width) {
+    public static void title(String title, int width) {
 
         int length, space, titleLength = title.length();
 
@@ -84,7 +85,7 @@ public class UsualMethod {
     }
 
     // Delay
-    public void delay(Integer count) {
+    public static void delay(Integer count) {
         try {
             TimeUnit.MILLISECONDS.sleep(count);
         } catch (Exception e) {
@@ -93,7 +94,7 @@ public class UsualMethod {
     }
 
     // Limpiar la consola
-    public void clean() {
+    public static void clean() {
         // Borrar consola con mensaje
         try {
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -103,7 +104,7 @@ public class UsualMethod {
     }
 
     // Pausar y Limpiar la consola
-    public void cleaner() {
+    public static void cleaner() {
         // Borrar consola con mensaje
         try {
             System.out.println();
